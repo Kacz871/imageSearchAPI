@@ -1,0 +1,32 @@
+<div *ngIf="!searchEnd" id="container">
+  <div id="main">
+    <h1>Unsplash</h1><br>
+    <p>The internet's source of <a href="https://unsplash.com/license" target="blank">freely-usable images.</a><br>
+    Powered by creators everywhere.</p>
+    <form (ngSubmit)="onSubmit()">
+      <div class="searchBox">
+          <button id="searchButton"><i class="fa fa-search"></i></button>
+          <input [(ngModel)]="searchWord" type="text" placeholder="Search free high-resolution photos" name="search" autocomplete="off">
+          <button *ngIf="searchWord.length > 0"  id="clearButton" (click)="searchClear()"><p>+</p></button>
+      </div>
+  </form>
+      <p id="tranding"><span>Tranding</span>: flowers, wallpapers, background, happy, love</p>
+      <app-input-hint *ngIf="searchWord.length > 2"></app-input-hint>
+  </div>
+</div>
+
+<div id="resoult" *ngIf="searchEnd">
+    <form (ngSubmit)="onSubmit()">
+      <div class="searchBox">
+          <button id="searchButton"><i class="fa fa-search"></i></button>
+          <input [(ngModel)]="searchWord" type="text" placeholder="Search free high-resolution photos" name="search" autocomplete="off">
+          <button *ngIf="searchWord.length > 0"  id="clearButton" (click)="searchClear()"><p>+</p></button>
+      </div>
+    </form>
+    <section class="images">
+      <h1>{{searchWord}}</h1>
+      <div *ngFor="let photo of image">
+            <img src="photo.urls.regular">
+      </div>
+    </section>
+</div>

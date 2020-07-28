@@ -1,0 +1,164 @@
+
+ #container {
+   font-family: -apple-system, BlinkMacSystemFont, San Francisco, Helvetica Neue, Helvetica, Ubuntu,
+   Roboto, Noto, Segoe UI, Arial, sans-serif;
+   font-size: 15px;
+   font-weight: 400;
+   line-height: 1.6;
+   position: relative;
+   height: 800px;
+   background-image: url(../assets/background.png);
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   color: #ffffff;
+ }
+
+ a {
+   color: #c2c2c2;
+ }
+
+ a:hover {
+   color: #ffffff;
+   -webkit-transition: color .1s ease-in-out,opacity .1s ease-in-out;
+   -o-transition: color .1s ease-in-out,opacity .1s ease-in-out;
+   transition: color .1s ease-in-out,opacity .1s ease-in-out;
+ }
+ #main {
+   height: 400px;
+   width: 55%;
+   margin: auto;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   -ms-transform: translate(-50%, -50%);
+   -webkit-transform: translate(-50%, -50%);
+   transform: translate(-50%, -50%);
+   text-align: left;
+   z-index: 0;
+ }
+
+ #main span {
+   color: #c2c2c2;
+   text-decoration: underline;
+ }
+
+ p {
+   display: block;
+ }
+
+ .searchBox {
+   position: absolute;
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-orient: horizontal;
+   -webkit-box-direction: normal;
+   -ms-flex-flow: row nowrap;
+   flex-flow: row nowrap;
+   -webkit-box-align: center;
+   -ms-flex-align: center;
+   align-items: center;
+ }
+
+ .searchBox input {
+   -webkit-box-sizing: content-box;
+   box-sizing: content-box;
+   margin: 25px 0 25px 0;
+   width: 500px;
+   height: 40px;
+   z-index: 5;
+   padding: 0 0 0 35px;
+   outline: none;
+   border-radius: 10px;
+   border: none;
+   -webkit-box-shadow: 0 0 0 3px #00000069;
+   box-shadow: 0 0 0 3px #00000069;
+ }
+
+ .searchBox button {
+   width: 30px;
+   height: 37px;
+   border: none;
+   outline: none;
+   cursor: pointer;
+   color: #c2c2c2;
+   z-index: 6;
+   -webkit-transition: 0.3s ease-in-out;
+   -o-transition: 0.3s ease-in-out;
+   transition: 0.3s ease-in-out;
+ }
+
+ .searchBox button:hover {
+   color: black;
+ }
+
+ #searchButton {
+   border-radius: 10px 0 0 10px;
+   margin-right: -33px;
+ }
+
+ #clearButton {
+   border-radius: 0 10px 10px 0;
+   margin-left: -33px;
+ }
+
+ #clearButton p {
+   font-size: 20px;
+   -webkit-transform: rotate(-45deg);
+   -ms-transform: rotate(-45deg);
+   transform: rotate(-45deg);
+ }
+
+ #tranding {
+   margin-top: 80px;
+ }
+
+ #tranding span {
+   color: #ffffff;
+   text-decoration: none;
+   font-weight: bold;
+ }
+
+ #resoult {
+   font-family: -apple-system, BlinkMacSystemFont, San Francisco, Helvetica Neue, Helvetica,
+   Ubuntu, Roboto, Noto, Segoe UI, Arial, sans-serif;
+   font-size: 15px;
+   font-weight: 400;
+   line-height: 1.6;
+   height: 800px;
+   width: 800px;
+   color: black;
+   text-align: center;
+ }
+
+ #resoult h1{
+   text-align: left;
+   font-weight: bold;
+   margin-top: 100px;
+   margin-left: 30px;
+ }
+
+ #resoult form{
+   display: inline-block;
+   margin-top: 10px;
+ }
+
+ #resoult .searchBox input{
+   width: 800px;
+ }
+
+ app-input-hint{
+   position: absolute;
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-orient: horizontal;
+   -webkit-box-direction: normal;
+   -ms-flex-flow: row nowrap;
+   flex-flow: row nowrap;
+   -webkit-box-align: center;
+   -ms-flex-align: center;
+   align-items: center;
+   bottom: -20px;
+ }
