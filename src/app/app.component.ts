@@ -1,3 +1,4 @@
+
 import { Component } from '@angular/core';
 import { SearchService } from './search.service';
 
@@ -18,12 +19,14 @@ export class AppComponent {
     this.image = [];
     this.searchEnd = false;
   }
+
   onSubmit = () =>{
     this.searchAPI.getImage(this.searchWord)
     .subscribe((res: any) => {
-        this.image = res;
+        this.image = res['results'];
     });
     this.searchEnd = true;
+
   }
 
 }

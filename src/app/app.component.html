@@ -25,8 +25,13 @@
     </form>
     <section class="images">
       <h1>{{searchWord}}</h1>
-      <div *ngFor="let photo of image">
-            <img src="photo.urls.regular">
+      <div class="imageContainer">
+        <div class="resoultImage" *ngFor="let photo of image">
+              <img [src]="photo.urls.small">
+              <div id = "photoTags">
+                <p></p>
+              </div>
+        </div>
       </div>
     </section>
 </div>

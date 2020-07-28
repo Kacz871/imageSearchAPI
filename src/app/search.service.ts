@@ -13,6 +13,6 @@ export class SearchService {
   getImage(keyWord: String){
     const url = `${this.API_URL}${this.API_Key}&query=${keyWord}`;
     return this.http.get(url);
-
+    
   }
 }
