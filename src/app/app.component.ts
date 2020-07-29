@@ -24,6 +24,7 @@ export class AppComponent {
     this.searchAPI.getImage(this.searchWord)
     .subscribe((res: any) => {
         this.image = res['results'];
+        console.log(this.image);
     });
     this.searchEnd = true;
 

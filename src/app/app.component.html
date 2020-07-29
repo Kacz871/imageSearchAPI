@@ -23,13 +23,13 @@
           <button *ngIf="searchWord.length > 0"  id="clearButton" (click)="searchClear()"><p>+</p></button>
       </div>
     </form>
+    <div id="searchTags"></div>
     <section class="images">
       <h1>{{searchWord}}</h1>
       <div class="imageContainer">
         <div class="resoultImage" *ngFor="let photo of image">
               <img [src]="photo.urls.small">
-              <div id = "photoTags">
-                <p></p>
+              <div id="photoTags">
               </div>
         </div>
       </div>
