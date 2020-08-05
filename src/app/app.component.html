@@ -6,12 +6,18 @@
     <form (ngSubmit)="onSubmit()">
       <div class="searchBox">
           <button id="searchButton"><i class="fa fa-search"></i></button>
-          <input [(ngModel)]="searchWord" type="text" placeholder="Search free high-resolution photos" name="search" autocomplete="off">
+          <input [(ngModel)]="searchWord" (keyup)="onKey($event)" type="text" placeholder="Search free high-resolution photos" name="search" autocomplete="off">
           <button *ngIf="searchWord.length > 0"  id="clearButton" (click)="searchClear()"><p>+</p></button>
       </div>
   </form>
       <p id="tranding"><span>Tranding</span>: flowers, wallpapers, background, happy, love</p>
-      <app-input-hint *ngIf="searchWord.length > 2"></app-input-hint>
+      <div id="hints" *ngIf="searchWord.length > 2">
+        <ul>
+          <li (click)="searchWithHint(h.query)" *ngFor="let h of hint">
+            {{h.query}}
+          </li>
+        </ul>
+      </div>
   </div>
 </div>
 
@@ -29,8 +35,6 @@
       <div class="imageContainer">
         <div class="resoultImage" *ngFor="let photo of image">
               <img [src]="photo.urls.small">
-              <div id="photoTags">
-              </div>
         </div>
       </div>
     </section>

@@ -13,6 +13,10 @@ export class SearchService {
   getImage(keyWord: String){
     const url = `${this.API_URL}${this.API_Key}&query=${keyWord}`;
     return this.http.get(url);
-    
+  }
+
+  getSearchHint(keyWord: String){
+    const url =`https://cors-anywhere.herokuapp.com/https://unsplash.com/nautocomplete/${keyWord}`;
+    return this.http.get(url);
   }
 }

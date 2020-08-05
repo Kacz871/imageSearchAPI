@@ -119,6 +119,47 @@
   text-decoration: none;
   font-weight: bold;
  }
+ #hints {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  bottom: -20px;
+  left: -2px;
+  z-index: 5;
+  height: 200px;
+  width: 535px;
+  background-color: white;
+  outline:none;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 0 0 3px #00000069;
+}
+
+#hints ul{
+  list-style-type: none;
+  z-index: 10;
+  text-decoration: none;
+}
+
+#hints ul li{
+  display: block;
+  color: black;
+  width: 530px;
+  height: 30px;
+  margin: 5px;
+}
+
+#hints ul li:hover{
+  cursor: pointer;
+}
 
  #resoult {
   font-family: -apple-system, BlinkMacSystemFont, San Francisco, Helvetica Neue, Helvetica,
@@ -130,6 +171,7 @@
   width: 800px;
   color: black;
   text-align: center;
+
  }
 
  #resoult h1{
@@ -148,28 +190,19 @@
   width: 800px;
  }
 
- app-input-hint{
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-flow: row nowrap;
-  flex-flow: row nowrap;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  bottom: -20px;
+ .images{
+  width: 1300px;
+  height: 1300px;
+  margin-left: 100px;
  }
  .imageContainer{
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+    margin: auto;
     padding: 0;
     width: 1200px;
     height: 1200px;
-    margin: 20px;
  }
  .resoultImage{
   flex-grow: 1;
